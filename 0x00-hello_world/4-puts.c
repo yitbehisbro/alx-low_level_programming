@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * This code is about printing string
- * in the console using puts function
+ * main: prints "Programming is like building a multilingual puzzle
+ * Return: return 0 for success
  */
 
 int main(void)
