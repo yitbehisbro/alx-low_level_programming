@@ -1,20 +1,19 @@
-/* usage of puts function */
-
+/* Usage of put function */
 #include <stdio.h>
 
 /**
-* main - displays text: "Programming is like building a multilingual puzzle
+* main: display the text
+*
 */
-
 int main(void)
+
 {
 
 puts("\"Programming is like building a multilingual puzzle");
 
 /**
- * return - returns 0 in success
- */
-
+*return: returns 0 for success
+*/
 return (0);
 
 }
