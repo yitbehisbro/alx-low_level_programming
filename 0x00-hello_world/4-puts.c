@@ -1,11 +1,16 @@
-/* Puts usage */
+/* Usage of 'puts' function */
 
 #include <stdio.h>
 
-/* main : prints a text on the console */
+/**
+ * main - Prints intially quote sentence
+ *
+ * Return: 0 in success
+ * 
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
-	/* Return - returns 0 in success */
+	/* Return: 0 in success */
 	return (0);
 }
