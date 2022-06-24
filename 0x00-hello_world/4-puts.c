@@ -14,7 +14,7 @@ int main(void)
 puts("\"Programming is like building a multilingual puzzle");
 
 /* return - returns 0 in success */
-return (0)
+return (0);
 
 }
 
