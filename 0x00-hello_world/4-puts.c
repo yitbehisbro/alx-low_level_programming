@@ -2,19 +2,10 @@
 
 #include <stdio.h>
 
-/**
- * main - displays text
- * 
- * return - returns 0 in success
- *
- */
+/* main - prints text */
 int main(void)
 {
-
-puts("\"Programming is like building a multilingual puzzle");
-
-/* return - returns 0 in success */
-return (0);
-
+	puts("\"Programming is like building a multilingual puzzle");
+	/* Return - returns 0 in success */
+	return (0);
 }
-
