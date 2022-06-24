@@ -15,7 +15,7 @@ int main(void)
 	long int longInt;
 	long long int long2Int;
 	float floatType;
-	
+
 	/* Prints size of data types */
 	printf("Size of a char: %zu bytes\n", sizeof(charType));
 	printf("Size of an int: %zu bytes\n", sizeof(intType));
