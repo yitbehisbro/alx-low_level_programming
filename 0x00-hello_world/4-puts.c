@@ -6,7 +6,7 @@
  * main - Prints intially quote sentence
  *
  * Return: 0 in success
- * 
+ *
  */
 int main(void)
 {
