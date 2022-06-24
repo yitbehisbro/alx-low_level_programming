@@ -1,2 +1,2 @@
-#!/bin/b.oh
+#!/bin/bash
 gcc -S $CFILE -o "$(echo $CFILE | cut -d'.' -f 1 ).o"
