@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
-* main - displays text
+* main - displays text: "Programming is like building a multilingual puzzle
 */
 
 int main(void)
