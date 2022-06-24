@@ -1,9 +1,9 @@
-/* Usage of puts */
+/* Puts usage */
 
 #include <stdio.h>
 
-/* main - prints text */
-int main(void)
+/* main : prints a text on the console */
+void main()
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	/* Return - returns 0 in success */
