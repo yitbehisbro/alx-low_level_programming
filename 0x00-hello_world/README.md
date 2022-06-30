@@ -88,8 +88,8 @@
 <p>To run the Betty linter just with command <code>betty &lt;filename&gt;</code>:</p>
 
 <ul>
-<li>Go to the <a href="/rltoken/wQ4sMfsWfxvyfN67Sc11zA" title="Betty" target="_blank">Betty</a> repository</li>
-<li>Clone the <a href="/rltoken/wQ4sMfsWfxvyfN67Sc11zA" title="repo" target="_blank">repo</a> to your local machine</li>
+<li>Go to the <a href="https://alx-intranet.hbtn.io/rltoken/wQ4sMfsWfxvyfN67Sc11zA" title="Betty" target="_blank">Betty</a> repository</li>
+<li>Clone the <a href="https://github.com/holbertonschool/Betty" title="repo" target="_blank">repo</a> to your local machine</li>
 <li><code>cd</code> into the Betty directory</li>
 <li>Install the linter with <code>sudo ./install.sh</code></li>
 <li><code>emacs</code> or <code>vi</code> a new file called <code>betty</code>, and copy the script below:</li>
