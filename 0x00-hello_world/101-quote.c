@@ -1,7 +1,5 @@
-{
 /* Prints the text */
-
-#include <stdio.h>
+{#include <stdio.h>
 
 /**
  * main - prints the text to the console
