@@ -16,13 +16,13 @@ int main(void)
 	long long int long2Int;
 	float floatType;
 
-	/* Print size of different data types */
+	/* Prints size of data types */
 	printf("Size of a char: %zu byte(s)\n", sizeof(charType));
 	printf("Size of an int: %zu byte(s)\n", sizeof(intType));
 	printf("Size of a long int: %zu byte(s)\n", sizeof(longInt));
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(long2Int));
 	printf("Size of a float: %zu byte(s)\n", sizeof(floatType));
 
-	/* Return: 0 in success
+	/* Return: 0 in success */
 	return (0);
 }
