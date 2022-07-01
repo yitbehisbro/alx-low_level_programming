@@ -1,6 +1,6 @@
 /* Filename: 102-print_comb5.c AND Author: Yitbarek Wendimu */
 
-#include <stdiok.h>
+#include <stdio.h>
 
 /**
  * main - Prints the four digits combination meaningfully
@@ -23,7 +23,7 @@ int main(void)
 			putchar((b / 10) + '0');
 			putchar((b % 10) + '0');
 
-			if (a == 98 && a == 99)
+			if (a == 98 && b == 99)
 				continue;
 
 			putchar(',');
