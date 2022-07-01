@@ -1,6 +1,6 @@
 /* Filename: 102-print_comb5.c AND Author: Yitbarek Wendimu */
 
-#include <stdiol.h>
+#include <stdio.h>
 
 /**
  * main - Prints the four digits combination meaningfully
