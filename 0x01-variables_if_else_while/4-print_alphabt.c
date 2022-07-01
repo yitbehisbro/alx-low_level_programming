@@ -9,16 +9,16 @@
  */
 int main(void)
 {
-    char k;
-    
-    for (k = 'A'; k <= 'Z'; k++)
-    {
-        if (tolower(k) == 'q')
-            continue;
+	char k;
+
+	for (k = 'A'; k <= 'Z'; k++)
+	{
         if (tolower(k) == 'e')
             continue;
-        putchar(tolower(k));
-    }
-    putchar('\n');
-    return (0);
+        if (tolower(k) == 'q')
+            continue;
+		putchar(tolower(k));
+	}
+	putchar('\n');
+	return (0);
 }
