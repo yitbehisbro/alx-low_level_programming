@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints the two digits combination meaningfully
+ * main - Prints the three digits combination meaningfully
  *
  * Return: 0 in success
  *
@@ -12,17 +12,22 @@ int main(void)
 {
 	int a;
 	int b;
+	int c;
 
 	for (a = 0; a <= 8; a++)
 	{
 		for (b = a + 1; b < 10; b++)
 		{
-			putchar(a + '0');
-			putchar(b + '0');
-			if ((b == 9) && (a == 8))
+			for (c = b + 1; c < 10; c++)
+			{
+				putchar(a + '0');
+				putchar(b + '0');
+				putchar(c + '0');
+				if ((b == 8) && (a == 7) && (c == 9))
 				continue;
-			putchar(',');
-			putchar(' ');
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
