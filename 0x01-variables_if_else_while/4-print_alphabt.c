@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 /**
- * main - prints character a to z
+ * main - prints character by ignoring q and e
  *
  * Return: 0 in success
  *
@@ -13,10 +13,10 @@ int main(void)
 
 	for (k = 'A'; k <= 'Z'; k++)
 	{
-        if (tolower(k) == 'e')
-            continue;
-        if (tolower(k) == 'q')
-            continue;
+		if (tolower(k) == 'q')
+		continue;
+		if (tolower(k) == 'e')
+		continue;
 		putchar(tolower(k));
 	}
 	putchar('\n');
