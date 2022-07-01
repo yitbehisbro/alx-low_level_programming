@@ -14,9 +14,9 @@ int main(void)
 	for (k = 'A'; k <= 'Z'; k++)
 	{
         if (tolower(k) == 'e')
-            continue
+            continue;
         if (tolower(k) == 'q')
-            continue
+            continue;
 		putchar(tolower(k));
 	}
 	putchar('\n');
