@@ -3,10 +3,10 @@
 int main(void)
 {
 	int a, b = 10;
-
-	for (int a = 0; a < b; a++)
+a = 0;
+for (a < b;;)
 {
-    printf("%d\n", a);
+    printf("%d\n", a++);
 }
 	return (0);
 }
