@@ -18,9 +18,11 @@ int main(void)
 
 	for (a = 0; a <= 8; a++)
 	{
-		putchar(a);
+		putchar(a + '0');
 		for (b = 1; b < 10; b++)
-			putchar(b);
+		{
+			putchar(b + '0');
+		}
 	}
 	putchar('\n');
 	return (0);
