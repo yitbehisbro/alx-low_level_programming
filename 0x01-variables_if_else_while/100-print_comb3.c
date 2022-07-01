@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 /**
- * main - prints combination of two digits
+ * main - Prints the two digits combination meaningfully
  *
  * Return: 0 in success
  *
