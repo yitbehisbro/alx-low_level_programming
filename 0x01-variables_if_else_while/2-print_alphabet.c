@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 
 /**
  * main - prints character a to z
