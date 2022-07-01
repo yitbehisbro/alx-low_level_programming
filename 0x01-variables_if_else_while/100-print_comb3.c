@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main: Prints the two digits combination meaningfully
+ * main - Prints the two digits combination meaningfully
  *
  * Return: 0 in success
  *
