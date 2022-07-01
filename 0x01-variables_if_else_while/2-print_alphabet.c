@@ -8,10 +8,11 @@
  */
 int main(void)
 {
-	for(int k = 'A'; k <= 'Z'; k++)
+	int k;
+
+	for(k = 'A'; k <= 'Z'; k++)
 	{
-		lowerCase = tolower(k);
-		putchar(lowerCase);
+		putchar(tolower(k));
 	}
 	return (0);
 }
