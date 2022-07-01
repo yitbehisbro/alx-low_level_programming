@@ -22,6 +22,10 @@ int main(void)
 		{
 			putchar(a + '0');
 			putchar(b + '0');
+			if (b == 9)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
