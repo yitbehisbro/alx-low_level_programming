@@ -14,10 +14,8 @@ int main(void)
     for (k = 'A'; k <= 'Z'; k++)
     {
         if (tolower(k) == 'q' || tolower(k) == 'e')
-        {
             continue;
             putchar(tolower(k));
-        }
     }
     putchar('\n');
     return (0);
