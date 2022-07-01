@@ -19,7 +19,7 @@ int main(void)
 	{
 		for (b = a; b < 9; b++)
 		{
-			for (c = b; c < 10; c++)
+			for (c = a; c < 10; c++)
 			{
 				for (d = c + 1; d < 10; d++)
 				{
