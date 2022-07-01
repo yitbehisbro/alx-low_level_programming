@@ -1,15 +1,11 @@
-/**
- * Filename: 100-print_comb3.c
- *
- * Author: Yitbarek Wendimu
- *
- */
+/* Filename: 100-print_comb3.c AND Author: Yitbarek Wendimu */
 #include <stdio.h>
 
 /**
  * main: Prints the two digits combination meaningfully
  *
  * Return: 0 in success
+ *
  */
 int main(void)
 {
@@ -29,7 +25,7 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	
+
 	/* Return: Return 0 in success */
 	return (0);
 }
