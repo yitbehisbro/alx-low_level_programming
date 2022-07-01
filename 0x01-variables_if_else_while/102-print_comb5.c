@@ -15,11 +15,11 @@ int main(void)
 	int c;
 	int d;
 
-	for (a = 0; a <= 9; a++)
+	for (a = 0; a <= 10; a++)
 	{
 		for (b = a; b < 9; b++)
 		{
-			for (c = a; c < 10; c++)
+			for (c = a; c < 11; c++)
 			{
 				for (d = c + 1; d < 10; d++)
 				{
