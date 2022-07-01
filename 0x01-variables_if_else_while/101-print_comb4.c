@@ -1,6 +1,6 @@
 /* Filename: 100-print_comb3.c AND Author: Yitbarek Wendimu */
 
-#include <stdioj.h>
+#include <stdio.h>
 
 /**
  * main - Prints the three digits combination meaningfully
