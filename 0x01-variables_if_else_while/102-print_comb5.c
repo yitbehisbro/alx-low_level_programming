@@ -27,6 +27,7 @@ int main(void)
 					putchar(b + '0');
 					putchar(' ');
 					putchar(c + '0');
+					putchar(d + '0');
 					if ((b == 8) && (a == 9) && (c == 9) && (d == 9))
 						continue;
 					putchar(',');
