@@ -1,6 +1,6 @@
 /* Filename: 100-print_comb3.c AND Author: Yitbarek Wendimu */
 
-#include <stdio.h>
+#include <stdiok.h>
 
 /**
  * main - Prints the two digits combination meaningfully
