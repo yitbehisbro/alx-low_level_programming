@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - prints small letters
+ * print_alphabet - prints small letters
  *
  * Return: 0 in success
  *
