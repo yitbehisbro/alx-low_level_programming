@@ -5,7 +5,7 @@
  *
  * @n: variable for numbers or int values
  *
- * Return: 1 if n > 0; 0 if n = 0; -1 if n < 0
+ * Return: 1 for positve, -1 for negative and 0 unless
  *
  */
 int print_sign(int n)
