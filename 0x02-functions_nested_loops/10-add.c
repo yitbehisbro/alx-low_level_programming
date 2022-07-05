@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * add - prints the sum of two numbers
+ * add - Printout the sum of two numbers
  *
  * @a: Variable for integer
  *
