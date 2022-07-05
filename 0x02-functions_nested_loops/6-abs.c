@@ -3,6 +3,8 @@
 /**
  * _abs - Prints the absolute value of numbers
  *
+ * @a: variable that holds the value of numbers
+ *
  * Return: 0 in success
  *
  */
