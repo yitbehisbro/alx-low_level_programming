@@ -12,7 +12,7 @@ void jack_bauer(void)
 
 	for (w = 0; w < 24; w++)
 	{
-		for (x = w; x <= 59; x++)
+		for (x = 0; x <= 59; x++)
 		{
 			_putchar((w / 10) + '0');
 			_putchar((w % 10) + '0');
@@ -23,7 +23,6 @@ void jack_bauer(void)
 			if ((w == 24) && (x == 59))
 				continue;
 			_putchar('\n');
-			x--;
 		}
 	}
 	_putchar('\n');
