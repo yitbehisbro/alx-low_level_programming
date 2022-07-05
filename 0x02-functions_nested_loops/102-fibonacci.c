@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints 50 fibonacci series
+ * main - Printout 50 fibonacci series
  *
  * Return: 0 in success
  *
