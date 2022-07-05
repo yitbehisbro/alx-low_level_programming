@@ -8,18 +8,18 @@
  */
 int main(void)
 {
-int c;
-	long int n1, n2, fn;
+	int i;
+	long int num1, num2, fs;
 
-	n1 = 1;
-	n2 = 2;
-	printf("%ld, %ld", n1, n2);
-	for (c = 0; c < 48; c++)
+	num1 = 1;
+	num2 = 2;
+	printf("%ld, %ld", num1, num2);
+	for (i = 0; i < 48; i++)
 	{
-		fn = n1 + n2;
-		printf(", %ld", fn);
-		n1 = n2;
-		n2 = fn;
+		fs = num1 + num2;
+		printf(", %ld", fs);
+		num1 = num2;
+		num2 = fs;
 	}
 	printf("\n");
 	return (0);
