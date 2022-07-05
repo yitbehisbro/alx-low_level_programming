@@ -1,50 +1,50 @@
 #include <stdio.h>
 
 /**
- * main - prints fibonaccie numbers
+ * main - Printout fibonaccie numbers
  *
  * Return: 0 in success
  *
  */
 int main(void)
 {
-	int i, bool1, bool2;
-	long int fs, fs2, _num1, _num2, num1, num2;
+	int c, boolean, boolean2;
+	long int n1, n2, fn, fn2, n11, n22;
 
-	num1 = 1;
-	num2 = 2;
-	bool1 =  bool2 = 1;
-	printf("%ld, %ld", num1, num2);
-	for (i = 0; i < 96; i++)
+	n1 = 1;
+	n2 = 2;
+	boolean =  boolean2 = 1;
+	printf("%ld, %ld", n1, n2);
+	for (c = 0; c < 96; c++)
 	{
-		if (bool1)
+		if (boolean)
 		{
-			fs = num1 + num2;
-			printf(", %ld", fs);
-			num1 = num2;
-			num2 = fs;
+			fn = n1 + n2;
+			printf(", %ld", fn);
+			n1 = n2;
+			n2 = fn;
 		}
 		else
 		{
-			if (bool2)
+			if (boolean2)
 			{
-				_num1 = num1 % 1000000000;
-				_num2 = _num2 % 1000000000;
-				num1 = num1 / 1000000000;
-				num2 = num2 / 1000000000;
-				bool2 = 0;
+				n11 = n1 % 1000000000;
+				n22 = n2 % 1000000000;
+				n1 = n1 / 1000000000;
+				n2 = n2 / 1000000000;
+				boolean2 = 0;
 			}
-			fs2 = (_num1 + _num2);
-			fs = num1 + num2 + (fs2 / 1000000000);
-			printf(", %ld", fs);
-			printf("%ld", fs2 % 1000000000);
-			num1 = num2;
-			_num1 = _num2;
-			num2 = fs;
-			_num2 = (fs2 % 1000000000);
+			fn2 = (n11 + n22);
+			fn = n1 + n2 + (fn2 / 1000000000);
+			printf(", %ld", fn);
+			printf("%ld", fn2 % 1000000000);
+			n1 = n2;
+			n11 = n22;
+			n2 = fn;
+			n22 = (fn2 % 1000000000);
 		}
-		if (((num1 + num2) < 0) && bool1 == 1)
-			bool1 = 0;
+		if (((n1 + n2) < 0) && boolean == 1)
+			boolean = 0;
 	}
 	printf("\n");
 	return (0);
