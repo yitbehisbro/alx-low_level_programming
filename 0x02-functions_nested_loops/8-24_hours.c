@@ -23,6 +23,7 @@ void jack_bauer(void)
 			if ((w == 24) && (x == 59))
 				continue;
 			_putchar('\n');
+			x --;
 		}
 	}
 	_putchar('\n');
