@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints minute in 24 hr
+ * jack_bauer - Printout minute in 24 hr
  *
  * Return: 0 in success
  *
