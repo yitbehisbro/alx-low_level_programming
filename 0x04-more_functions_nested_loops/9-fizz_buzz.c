@@ -1,36 +1,34 @@
 #include <stdio.h>
 
 /**
- * main - prints number 1 through 100 with some words
- *
+ * main - prints numbers of 1 throug 100 with words
  * Return: Always 0.
  */
 int main(void)
 {
-	int i;
+	int k;
 
-	i = 1;
-	printf("%d", i);
-
-	for (i = 2; i <= 100; i++)
+	k = 1;
+	printf("%d", k);
+	for (k = 2; k <= 100; k++)
 	{
-		if (((i % 3) == 0))
-		{
-			printf(" Fizz");
-		}
-		else if (((i % 5) == 0))
-		{
-			printf(" Buzz");
-		}
-		else if (((i % 5) == 0) && ((i % 3) == 0))
+		if ((k % 3 == 0) && (k % 5 == 0))
 		{
 			printf(" FizzBuzz");
 		}
+		else if (k % 3 == 0)
+		{
+			printf(" Fizz");
+		}
+		else if (k % 5 == 0)
+		{
+			printf(" Buzz");
+		}
 		else
 		{
-			printf(" %d", i);
+			printf(" %d", k);
 		}
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
