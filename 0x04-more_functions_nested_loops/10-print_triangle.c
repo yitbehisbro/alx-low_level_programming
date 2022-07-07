@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - prints the triangle
+ * main - Printout the triangle
  *
  * Return: 0 in success
  */
@@ -13,7 +13,6 @@ void print_triangle(int size)
 	{
 		for (b = 1; b < (size - a); b++)
 			_putchar(' ');
-
 		for (b--; b < size; b++)
 			_putchar(35);
 		if (a < (size - 1))
