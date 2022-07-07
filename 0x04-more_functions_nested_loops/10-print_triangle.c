@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Printout the triangle
+ * main - prints the triangle
  *
  * Return: 0 in success
  */
