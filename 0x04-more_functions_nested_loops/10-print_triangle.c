@@ -2,7 +2,7 @@
 
 /**
  * main - prints the triangle
- *
+ * @size: variable that holds value for triangle size
  * Return: 0 in success
  */
 void print_triangle(int size)
