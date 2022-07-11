@@ -1,24 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * main - generates valid password
+ * main - generates random valid passwords 
+ *
  * Return: 0 Always.
  */
 int main(void)
 {
-	int r = 0, c = 0;
 	time_t t;
+	int crack, random;
+
+	crack = 0;
+	random = 0;
 
 	srand((unsigned int) time(&t));
-	while (c < 2772)
+
+	while (crack < 2772)
 	{
-		r = rand() % 128;
-		if ((c + r) > 2772)
+		random = rand() % 128;
+
+		if ((crack + random) > 2772)
 			break;
-		c = c + r;
-		printf("%c", r);
+
+		crack += random;
+		printf("%c", random);
 	}
-	printf("%c\n", (2772 - c));
+	printf("%c\n", (2772 - crack));
 	return (0);
 }
