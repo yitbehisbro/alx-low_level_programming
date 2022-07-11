@@ -2,7 +2,7 @@
 
 /**
  * _strcpy - copies the string pointed to by src
- * @desc: variable that holds the value of variable
+ * @dest: variable that holds the value of variable
  * @src: sting values
  * Return: Always 0.
  */
@@ -18,9 +18,8 @@ char *_strcpy(char *dest, char *src)
 	}
 	size = length;
 
-	for (a = 0; a < size && src[a] != '\0'; a++)
+	for (a = 0; a < size; a++)
 		dest[a] = src[a];
-
 	for ( ; a < size; a++)
 		dest[a] = '\0';
 	return (dest);
