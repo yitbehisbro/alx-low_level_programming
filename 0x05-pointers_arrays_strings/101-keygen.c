@@ -21,7 +21,7 @@ int main(void)
 		if ((crack + random) > 2772)
 			break;
 
-		crack += random;
+		crack = crack + random;
 		printf("%c", random);
 	}
 	printf("%c\n", (2772 - crack));
