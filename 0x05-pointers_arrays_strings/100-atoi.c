@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * atoi - prints integers
+ * _atoi - prints integers
  * @s: character that holds string values
  * Return: Always 0.
  */
