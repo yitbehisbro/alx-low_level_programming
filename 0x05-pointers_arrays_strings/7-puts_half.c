@@ -10,7 +10,7 @@ void puts_half(char *str)
 	int length, size, length2;
 
 	length = 0;
-	
+
 	while (*(str + length) != '\0')
 	{
 		length++;
@@ -21,7 +21,7 @@ void puts_half(char *str)
 	{
 		length2 = size / 2;
 
-		while (length2 >= 0)
+		while (length2 > 0)
 		{
 			if (str[length2] == '\0')
 			{
@@ -36,7 +36,7 @@ void puts_half(char *str)
 	{
 		length2 = (size - 1) / 2;
 
-		while (length2 >= 0)
+		while (length2 > 0)
 		{
 			if (str[length2] == '\0')
 			{
@@ -46,5 +46,6 @@ void puts_half(char *str)
 			_putchar(str[length2]);
 			length2++;
 		}
-	}		
+	}
 }
+
