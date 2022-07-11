@@ -21,5 +21,5 @@ char *_strcpy(char *dest, char *src)
 	for (a = 0; a < size; a++)
 		*(dest + a) = *(src + a);
 
-	return (dest);
+	return (dest + '\0');
 }
