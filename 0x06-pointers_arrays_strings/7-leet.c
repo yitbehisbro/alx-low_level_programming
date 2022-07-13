@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * leet - encodes a string into 1337
+ * leet - encodes any string into 1337
  * @cs: pointer to char
  * Return: Always 0.
  */
@@ -18,8 +18,8 @@ char *leet(char *cs)
 	{
 		for (i = 0; i < 5; i++)
 			if (cap_str[i] == *(cs + length) || lower_str[i] == *(cs + length))
-				*(cs + length) = digit_str[i];	
-		length++;		
+				*(cs + length) = digit_str[i];
+		length++;
 	}
 	return (cs);
 }
