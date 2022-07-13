@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - concatenet two string by using at most n bytes from @src
+ * _strncat - concatenet two string by using at most n bytes from src
  * @src: pointer to character variable 1
  * @dest: pointer to character variable 2
  * @n: integer values for bytes
@@ -23,5 +23,5 @@ char *_strncat(char *dest, char *src, int n)
                    *(dest + (dest_size + a)) = *(src + a);
 	*(dest + (dest_size + a)) = '\0';
 
-	return dest;
+	return (dest);
 }
