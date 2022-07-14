@@ -18,22 +18,17 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	while (*(n1 + a1) != '\0')
 		a1++;
-
 	while (*(n2 + a2) != '\0')
 		a2++;
-
 	if (a1 >= a2)
 		d = a1;
 	else
 		d = a2;
-
 	if (size_r <= d + 1)
 		return (0);
-
 	r[d + 1] = '\0';
 	a1--, a2--, size_r--;
 	s1 = *(n1 + a1) - 48, s2 = *(n2 + a2) - 48;
-
 	while (d >= 0)
 	{
 		opr = s1 + s2 + sum;
@@ -42,7 +37,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			sum = 0;
 		if (opr > 0)
-		*(r + d) = (opr % 10) + 48;
+			*(r + d) = (opr % 10) + 48;
 		else
 			*(r + d) = '0';
 		if (a1 > 0)
