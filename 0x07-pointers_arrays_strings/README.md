@@ -2,10 +2,10 @@
 
 <h3>Read or watch</h3>
 <ul>
-<li><a href="https://alx-intranet.hbtn.io/rltoken/PVi2XMuApOK3jfhsoqsyXw">C - Arrays</a></li>
-<li><a href="https://alx-intranet.hbtn.io/rltoken/oyHybzYBeFiLUMALpb_usA">C - Pointer</a></li>
-<li><a href="https://alx-intranet.hbtn.io/rltoken/sUeh9qDyW9pePOfJIpx_Bw">C - String</a></li>
-<li><a href="https://alx-intranet.hbtn.io/rltoken/0k6CD2ZMzSFOMUxMOBiAlQ">Memory Layout</a></li>
+<li><a href="https://alx-intranet.hbtn.io/rltoken/HUZIJ6t55KM7d7FBCwWm8Q">C - Multi Dimentional Arrays</a></li>
+<li><a href="https://alx-intranet.hbtn.io/rltoken/eyikXPg7ZxCAEuWklB6xtQ">C - Pointer to pointer</a></li>
+<li><a href="https://alx-intranet.hbtn.io/rltoken/ojr7OUUm2I-MULE4lWlrkg">C - Pointer to pointer with example</a></li>
+<li><a href="https://alx-intranet.hbtn.io/rltoken/Dx9nIBRj68sRBGe2NRI_aQ">Two dimentional array</a></li>
 </ul>
 <h2>Requirements</h2>
 <h3>General</h3>
