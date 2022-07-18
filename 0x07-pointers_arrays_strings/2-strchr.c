@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _strchr - find the first occernance of c
- * @s: ponter to char (string)
+ * _strchr - the first occernance of c
+ * @s: pointer to char string
  * @c: character to be find
  * Return: pointer to s or NULL
  */
