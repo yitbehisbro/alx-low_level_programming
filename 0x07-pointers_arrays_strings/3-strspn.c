@@ -8,14 +8,21 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int length = 0;
+	unsigned int a, b, c;
 
-	if ((*s == '\0') || (*accept == '\0'))
-		return (length);
-
-	while (*s && _strchr(accept, *s++))
+	for (a = 0; *(s + a) != '\0'; a++)
 	{
-		length++;
+		c = 1;
+		for (b = 0; *(accept + b) != '\0'; b++)
+		{
+			if (*(s + a) == *(accept + b))
+			{
+				c = 0;
+				break;
+			}
+		}
+		if (c == 1)
+			break;
 	}
-    return (length);
+	return (a);
 }
