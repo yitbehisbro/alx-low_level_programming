@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
  * _memset - fills memory with a constant byte
  * @s: pointer to the block of memory to be filled
- * @b: fills the block of memory using the unsigned char conversion of this value
+ * @b: fills the block of memory
  * @n: number of bytes to be set to the value
  * Return: the pointer to s
  */
