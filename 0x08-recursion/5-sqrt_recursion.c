@@ -6,16 +6,16 @@
  * @y: integer value 2
  * Return: Always 0.
  */
-int power_to(int n, int c)
+int power_to(int x, int y)
 {
-	if (c % (n / c) == 0)
+	if (y % (x / y) == 0)
 	{
-		if (c * (n / c) == n)
-			return (c);
+		if (y * (x / y) == x)
+			return (y);
 		else
 			return (-1);
 	}
-	return (0 + power_to(n, c + 1));
+	return (0 + power_to(x, y + 1));
 }
 
 /**
