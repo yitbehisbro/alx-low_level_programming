@@ -16,7 +16,7 @@ int is_prime(int a, int b)
 		return (is_prime(a + 1, b));
 }
 /**
- * is_prime_number - decide if the number prime
+ * is_prime_number - Decides, if the number prime
  * @n: integer numbers to be checked
  * Return: 1 if n is prime else 0
  */
