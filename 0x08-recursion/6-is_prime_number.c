@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_prime - Checks, if the number is prime
+ * is_prime - Checks if, if the number is prime
  * @a: integer value for factor
  * @b: numbers if prime
  * Return: 1 if b is prime else 0
