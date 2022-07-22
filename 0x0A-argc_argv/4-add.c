@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - prints the sum
@@ -9,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, sum;
+	int a, b, sum = 0;
 
 	for (a = 1; a < argc; a++)
 	{
@@ -21,8 +22,16 @@ int main(int argc, char *argv[])
 		if (atoi(argv[a]) < 0 || !atoi(argv[a]) || argc == 2)
 		{
 			printf("Error\n");
-			exit(0);
 			return (1);
+			exit(0);
+		}
+		for (b = 0; argv[a][b] != '\0'; b++)
+		{
+			if (!isdigit(argv[a][b]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		sum += atoi(argv[a]);
 	}
