@@ -6,15 +6,12 @@
  * @argv: vector that holds string
  * Return: 0 in success
  */
-int main (int argc, __attribute__((unused)) char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	if (argc >= 0)
-	{
-		printf("%d\n", argc - 1);
-	}
-	else
+	if (argc < 0)
 	{
 		return (-1);
 	}
+	printf("%d\n", argc - 1);
 	return (0);
 }
