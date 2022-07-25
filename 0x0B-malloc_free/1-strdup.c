@@ -29,11 +29,21 @@ char *_strdup(char *str)
 		return ('\0');
 	}
 
-	while (*(str + size) != '\0')
+	for (i = 0; i < size; i++)
 	{
+		if (*(str + size) == '\0')
+		{
+			return ('\0');
+		}
 		*(ss + size) = *(str + size);
-		size--;
 	}
+	/**
+	 * while (*(str + size) != '\0')
+	 * {
+	 *	*(ss + size) = *(str + size);
+	 *	size--;
+	 * }
+	 */
 	return (ss);
 	free(ss);
 }
