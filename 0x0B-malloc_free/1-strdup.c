@@ -10,10 +10,12 @@
 char *_strdup(char *str)
 {
 	char *ss;
-	unsigned int size = 0;
+	unsigned int a, size = 0;
 
-	ss = (char *)malloc(sizeof(char));
+	for (a = 0; str[a] != '\0'; a++)
+		;
 
+	ss = (char *)malloc(sizeof(char) * (a + 1));
 	if (str == NULL)
 	{
 		return ('\0');
