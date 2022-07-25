@@ -16,18 +16,11 @@ char *_strdup(char *str)
 		;
 
 	ss = (char *)malloc(sizeof(char) * (a + 1));
-	if (ss == NULL)
-		return (NULL);
 
-	if (str == NULL)
-	{
-		return ('\0');
-	}
 	if (ss == NULL)
 	{
 		return ('\0');
 	}
-
 	while (*(str + size) != '\0')
 	{
 		*(ss + size) = *(str + size);
