@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup - duplicates the string
+ * _strdup - Duplicates the strings
  * @str: strings to be duplicated
  * Return: Always 0.
  */
