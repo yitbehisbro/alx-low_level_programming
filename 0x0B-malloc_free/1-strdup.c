@@ -12,6 +12,10 @@ char *_strdup(char *str)
 	char *ss;
 	unsigned int a, size = 0;
 
+	if (str == NULL)
+	{
+		return ('\0');
+	}
 	for (a = 0; str[a] != '\0'; a++)
 		;
 
