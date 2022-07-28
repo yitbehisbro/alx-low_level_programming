@@ -25,7 +25,7 @@ void errors(void)
  */
 int main(int argc, char *argv[])
 {
-	int a, b, mul = 1;
+	long long int a, b, mul = 1;
 
 	for (a = 1; a < argc; a++)
 	{
@@ -46,6 +46,6 @@ int main(int argc, char *argv[])
 		}
 		mul *= atoi(argv[a]);
 	}
-	printf("%d\n", mul);
+	printf("%lld\n", mul);
 	return (0);
 }
