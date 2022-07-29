@@ -48,12 +48,6 @@ int main(int argc, char *argv[])
 		}
 		mul *= strtold(argv[a], NULL);
 	}
-	if (mul == 0.000000)
-	{
-		_putchar('0');
-		printf("\n");
-	}
-
 	sprintf(product, "%1.0Lf", mul);
 	puts(product);
 	return (0);
