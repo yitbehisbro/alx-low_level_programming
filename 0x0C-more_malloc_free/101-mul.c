@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
 	long double mul = 1;
 	int a, b;
-	char product[sizeof(mul) * 10000];
+	char product[sizeof(mul) * 50000];
 
 	if (argc == 2 || argc > 3 || argc == 1)
 	{
@@ -48,8 +48,11 @@ int main(int argc, char *argv[])
 		}
 		mul *= strtold(argv[a], NULL);
 	}
-	if (mul < 0)
-		errors();
+	if (mul == 0.000000)
+	{
+		_putchar('0');
+		printf("\n");
+	}
 
 	sprintf(product, "%1.0Lf", mul);
 	puts(product);
