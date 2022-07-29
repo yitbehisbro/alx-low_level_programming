@@ -48,6 +48,9 @@ int main(int argc, char *argv[])
 		}
 		mul *= strtold(argv[a], NULL);
 	}
+	if (mul < 0)
+		errors();
+
 	sprintf(product, "%1.0Lf", mul);
 	puts(product);
 	return (0);
