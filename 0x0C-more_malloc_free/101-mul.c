@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <ctype.h>
 
 /**
@@ -9,12 +10,7 @@
  */
 void errors(void)
 {
-	_putchar('E');
-	_putchar('r');
-	_putchar('r');
-	_putchar('o');
-	_putchar('r');
-	_putchar('\n');
+	printf("Error\n");
 	exit(98);
 }
 /**
@@ -25,15 +21,21 @@ void errors(void)
  */
 int main(int argc, char *argv[])
 {
-	long int a, b, mul = 1;
+	long double mul = 1;
+	int a, b;
+	char product[sizeof(mul) * 10000];
 
+	if (argc == 2 || argc > 3 || argc == 1)
+	{
+		errors();
+	}
 	for (a = 1; a < argc; a++)
 	{
 		if (argc == 1)
 		{
 			errors();
 		}
-		if (atoi(argv[a]) < 0 || !atoi(argv[a]) || argc == 2)
+		if (argc == 2)
 		{
 			errors();
 		}
@@ -44,8 +46,9 @@ int main(int argc, char *argv[])
 				errors();
 			}
 		}
-		mul *= atoi(argv[a]);
+		mul *= strtold(argv[a], NULL);
 	}
-	printf("%ld\n", mul);
+	sprintf(product, "%1.0Lf", mul);
+	puts(product);
 	return (0);
 }
