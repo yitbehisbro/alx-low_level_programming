@@ -3,6 +3,6 @@
 
 #define N (-1)
 #define Y 0
-#define ABS(x) ((x) < (Y) ? (N * x) : (x))
+#define ABS(x) ((x) == (Y) ? (x) : ((x) < (Y) ? (N * x) : (x)))
 
 #endif
