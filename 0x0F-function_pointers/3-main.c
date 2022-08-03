@@ -11,26 +11,32 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
+	int num1, num2;
+	int (*calculate)(int, int);
 
-	int (*f)(int, int);
-
-	if (argc < 4 || argc > 4)
+	if (argc != 4)
 	{
-		printf("Erorr\n");
+		printf("Error\n");
 		exit(98);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-	f = get_op_func(argv[2]);
-
-	if (f == NULL)
+	if (argv[2][1])
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	result = f(num1, num2);
-	printf("%d\n", result);
+
+	calculate = get_op_func(argv[2]);
+
+	if (calculate == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+
+	printf("%d\n", calculate(num1, num2));
 	return (0);
 }
