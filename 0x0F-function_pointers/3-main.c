@@ -1,7 +1,7 @@
+#include "3-calc.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "3-calc.h"
 
 /**
  * main - prints the result
@@ -12,6 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
+
 	int (*f)(int, int);
 
 	if (argc < 4 || argc > 4)
