@@ -1,5 +1,5 @@
-#ifndef _CALC_H_
-#define _CALC_H_
+#ifndef _3_CALC_H_
+#define _3_CALC_H_
 
 /**
  * struct op - Struct op
@@ -20,4 +20,4 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
-#endif /* _CALC_H_ */
+#endif /* _3_CALC_H_ */
