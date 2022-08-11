@@ -3,7 +3,7 @@
 
 /**
  * before_main - prints text before main
- *
+ * @void: no parameters
  * Return: no return
  */
 void before_main(void)
