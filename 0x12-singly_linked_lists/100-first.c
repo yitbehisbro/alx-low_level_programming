@@ -1,7 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
 
-
 /**
  * before_main - prints text before main
  *
