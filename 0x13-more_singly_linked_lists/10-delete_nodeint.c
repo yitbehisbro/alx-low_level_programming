@@ -6,7 +6,7 @@
  * @head: pointer to the struct
  * @index: index of the node, starting at 0
  *
- * Return: the address of the new node else NULL
+ * Return: 1 or -1 if fails
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
