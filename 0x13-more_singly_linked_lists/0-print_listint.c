@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_listint -  prints all the nodes of a listint_t list.
+ * print_listint -  prints all the nodes of a list.
  * @h: pointer to struct
  *
  * Return: number of nodes in the list
@@ -13,9 +13,9 @@ size_t print_listint(const listint_t *h)
 
 	while (h != NULL)
 	{
-		cntr++;
 		printf("%d\n", h->n);
 		h = h->next;
+		cntr++;
 	}
 	return (cntr);
 }
