@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * _realloc - reallocates memory to the nodes in a linked list
+ * _realloc2 - reallocates memory to the nodes in a linked list
  * @l: the list to append
  * @s: size of the new list
  * @n: new node to add
