@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -15,13 +13,10 @@ int pop_listint(listint_t **head)
         int backup;
 
         if (*head == NULL)
-        {
                 return (NULL);
-        }
+
         backup = h->n;
         (*head) = (*head)->next;
-
         free(h);
-
         return (backup);
 }
