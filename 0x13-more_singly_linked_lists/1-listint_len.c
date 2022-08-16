@@ -1,10 +1,8 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
 /**
- * listint_len - prints number of the elements 
+ * listint_len - prints number of the elements
  * @h: pointer to the struct
  *
  * Return: number of elements
