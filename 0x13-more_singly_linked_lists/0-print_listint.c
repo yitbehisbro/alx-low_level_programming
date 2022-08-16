@@ -1,7 +1,9 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * print_listint - prints all the elements
+ * print_listint - prints all the
+ * elements of linked list
  * @h: pointer to the struct
  *
  * Return: size of the list
