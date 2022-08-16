@@ -2,13 +2,15 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - deletes node at a given position
+ * delete_nodeint_at_index - deletes node at a
+ * given position
  * @head: pointer to the struct
  * @index: index of the node, starting at 0
  *
  * Return: 1 or -1 if fails
  */
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+int delete_nodeint_at_index(listint_t **head,
+			    unsigned int index)
 {
  	unsigned int a;
 	listint_t *prev;
@@ -18,13 +20,15 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index != 0)
 	{
-		for (a = 0; a < index - 1 && prev != NULL; a++)
+		for (a = 0; a < index - 1 &&
+		     prev != NULL; a++)
 		{
 			prev = prev->next;
 		}
 	}
 
-	if (prev == NULL || (prev->next == NULL && index != 0))
+	if (prev == NULL || (prev->next == NULL
+			     && index != 0))
 	{
 		return (-1);
 	}
