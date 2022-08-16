@@ -5,21 +5,18 @@
  * free_listint2 - frees the memory
  * @head: pointer to the struct
  *
- * Return: Always 0.
+ * Return: no return
  */
 void free_listint2(listint_t **head)
 {
-        listint_t *clean;
-	listint_t *temp;
+	listint_t *h;
 
-	if (head != NULL)
+	if (head == NULL)
+		return;
+	while (*head != NULL)
 	{
-		clean = *head;
-		while ((temp = clean) != NULL)
-		{
-			clean = clean->next;
-			free(temp);
-		}
-		*head = NULL;
+		h = (*head)->h;
+		free(*head);
+		*head = next;
 	}
 }
