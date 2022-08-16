@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /**
- * print_listint - prints all the
- * elements of linked list
- * @h: pointer to the struct
+ * print_listint - prints all the nodes of a list.
+ * @h: pointer to the list.
  *
- * Return: size of the list
+ * Return: numbers of nodes.
  */
 size_t print_listint(const listint_t *h)
 {
