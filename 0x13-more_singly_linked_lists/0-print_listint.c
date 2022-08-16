@@ -17,7 +17,7 @@ size_t print_listint(const listint_t *h)
 		cmpr++;
 	}
 
-	while (h != NULL && cntr < cmpr)
+	while (h != NULL && cntr <= cmpr)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
