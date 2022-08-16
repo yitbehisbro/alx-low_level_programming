@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - adds a new node at the end
+ * add_nodeint_end - adds a new node at the end
  * @head: pointer to the struct head
  * @n: integer to be added
  *
@@ -11,26 +11,29 @@
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new;
-	listint_t *current;
+	listint_t *new_node;
 
-	if (head == NULL)
+	new_node = malloc(sizeof(listint_t));
+
+	if (new_node == NULL)
 		return (NULL);
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = NULL;
+
+	new_node->n = n;
+	new_node->next = NULL;
+
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = new_node;
 	}
-	current = *head;
-	while (current->next != NULL)
+	else
 	{
-		current = current->next;
+		listint_t *last_node = *head;
+
+		while (last_node->next != NULL)
+		{
+			last_node = last_node->next;
+		}
+		last_node->next = new_node;
 	}
-	current->next = new;
-	return (new);
+	return (*head);
 }
