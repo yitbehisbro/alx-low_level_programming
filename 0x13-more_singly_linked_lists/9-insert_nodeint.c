@@ -2,24 +2,6 @@
 #include <stdlib.h>
 
 /**
- * get_node - get the size of node
- * @h: pointer to the struct
- *
- * Return: size of the list.
- */
-int get_node(listint_t * h)
-{
-        unsigned int length = 0;
-
-        while (h != NULL)
-        {
-                h = h->next;
-                length++;
-        }
-        return (length);
-}
-
-/**
  * insert_nodeint_at_index - inserts a new node at a given position
  * @head: pointer to the struct
  * @n: values to be added
@@ -29,26 +11,39 @@ int get_node(listint_t * h)
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-        listint_t *temp = *head;
-        unsigned int size = get_node(*head);
-        listint_t *h = (listint_t *) malloc(sizeof(listint_t)); 
+	unsigned int i;
+	listint_t *new;
+	listint_t *h;
 
-        h->n = n;
-        h->next = NULL;
+	h = *head;
 
-        if (idx > size) 
-                return (NULL);
-        else if (idx == 0)
-        {
-                h->next = *head; 
-                *head = h;
-        }
-        else 
-        {
-                while (--idx)
-                        temp = temp->next;
-                h->next= temp->next;
-                temp->next = h;
-        }
-        return (*head);
+	if (idx != 0)
+	{
+		for (i = 0; i < idx - 1 && h != NULL; i++)
+		{
+			h = h->next;
+		}
+	}
+
+	if (h == NULL && idx != 0)
+		return (NULL);
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+
+	if (idx == 0)
+	{
+		new->next = *head;
+		*head = new;
+	}
+	else
+	{
+		new->next = h->next;
+		h->next = new;
+	}
+
+	return (new);
 }
