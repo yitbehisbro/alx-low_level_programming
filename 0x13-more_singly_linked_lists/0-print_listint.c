@@ -3,9 +3,9 @@
 
 /**
  * print_listint - prints all the elements of a listint_t list.
- * @h: pointer to struct
+ * @h: pointer to the struct listint_t
  *
- * Return: number of elements in the list
+ * Return: the number of nodes
  */
 size_t print_listint(const listint_t *h)
 {
