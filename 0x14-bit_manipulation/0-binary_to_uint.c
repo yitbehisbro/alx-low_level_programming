@@ -14,11 +14,15 @@ unsigned int binary_to_uint(const char *b)
 	int a = 0;
 
 	if (b == NULL)
+	{
 		return (0);
+	}
 	while (b[a] != '\0')
 	{
 		if (!(b[a] >= 48 && b[a] <= 49))
+		{
 			return (0);
+		}
 		else
 		{
 			i <<= 1;
