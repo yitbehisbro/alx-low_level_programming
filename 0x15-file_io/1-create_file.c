@@ -16,36 +16,28 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int file_d;
-	size_t size = 0;
-	int length = 0;
+	int file_d, size = 0, buff;
 
-	/** To get the size of text_content */
-	while (*(text_content + size) != '\0')
-	{
-		size++;
-	}
-	if (filename == NULL)
-	{
+	if (!filename)
 		return (-1);
-	}
-	if (text_content == NULL)
-	{
-		text_content = "";
-	}
+
 	file_d = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+
 	if (file_d == -1)
-	{
 		return (-1);
-	}
-	if (text_content != NULL)
-	{
-		length = write(file_d, text_content, size);
-	}
+
+	if (!text_content)
+		text_content = "";
+
+	for ( ; text_content[size]; size++)
+		;
+
+	buff = write(file_d, text_content, size);
+
+	if (buff == -1)
+		return (-1);
+
 	close(file_d);
-	if (length == -1)
-	{
-		return (-1);
-	}
+
 	return (1);
 }
