@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 	}
 
 	cp_this = open(argv[1], O_RDONLY);
+
 	if (cp_this == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -33,6 +34,7 @@ int main(int argc, char *argv[])
 	}
 
 	to_this = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+
 	if (to_this == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -40,9 +42,11 @@ int main(int argc, char *argv[])
 	}
 
 	count_ch = 1024;
+
 	while (count_ch == 1024)
 	{
 		count_ch = read(cp_this, buffer, 1024);
+
 		if (count_ch == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -50,6 +54,7 @@ int main(int argc, char *argv[])
 		}
 
 		count_fd = write(to_this, buffer, count_ch);
+
 		if (count_fd == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -58,6 +63,7 @@ int main(int argc, char *argv[])
 	}
 
 	close_in_error = close(cp_this);
+
 	if (close_in_error == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cp_this);
@@ -65,6 +71,7 @@ int main(int argc, char *argv[])
 	}
 
 	close_in_error = close(to_this);
+
 	if (close_in_error == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cp_this);
