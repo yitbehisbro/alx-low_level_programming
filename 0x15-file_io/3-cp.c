@@ -3,15 +3,14 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdlib.h>
 
 /**
- * main - copies the content of a file to another file
- * @argc: number of argument passes
- * @argv: arguments vector
- *
- * Return: Always 0.
- */
+* main - copies the content of a file to another file
+* @argc: number of argument passes
+* @argv: arguments vector
+*
+* Return: Always 0.
+*/
 int main(int argc, char *argv[])
 {
 int cp_this, to_this, close_in_error;
