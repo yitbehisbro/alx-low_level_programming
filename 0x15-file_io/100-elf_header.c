@@ -136,11 +136,11 @@ void print_data(char *ptr)
 		printf(", big endian\n");
 }
 /**
- * print_magic - prints magic info.
+ * info_magic - prints magic info.
  * @ptr: magic.
  * Return: no return.
  */
-void print_magic(char *ptr)
+void info_magic(char *ptr)
 {
 	int bytes;
 
@@ -154,11 +154,11 @@ void print_magic(char *ptr)
 }
 
 /**
- * check_sys - check the version system.
+ * _systeminfo - check the version system.
  * @ptr: magic.
  * Return: no return.
  */
-void check_sys(char *ptr)
+void _systeminfo(char *ptr)
 {
 	char sys = ptr[4] + '0';
 
@@ -166,7 +166,7 @@ void check_sys(char *ptr)
 		exit(98);
 
 	printf("ELF Header:\n");
-	print_magic(ptr);
+	info_magic(ptr);
 
 	if (sys == '1')
 		printf("  Class:                             ELF32\n");
@@ -182,11 +182,11 @@ void check_sys(char *ptr)
 }
 
 /**
- * check_elf - check if it is an elf file.
+ * is_elf - check if it is an elf file.
  * @ptr: magic.
  * Return: 1 if it is an elf file. 0 if not.
  */
-int check_elf(char *ptr)
+int is_elf(char *ptr)
 {
 	int addr = (int)ptr[0];
 	char E = ptr[1];
@@ -233,13 +233,13 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (!check_elf(ptr))
+	if (!is_elf(ptr))
 	{
 		dprintf(STDERR_FILENO, "Err: It is not an ELF\n");
 		exit(98);
 	}
 
-	check_sys(ptr);
+	_systeminfo(ptr);
 	close(fd);
 
 	return (0);
