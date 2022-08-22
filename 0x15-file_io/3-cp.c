@@ -1,10 +1,9 @@
+#include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * main - copies the content of a file to another file
@@ -24,10 +23,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
-
 	cp_this = open(argv[1], O_RDONLY);
 	to_this = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-
 	if (cp_this == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -38,7 +35,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
 	count_ch = 1024;
 	while (count_ch == 1024)
 	{
@@ -55,14 +51,12 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-
 	close_in_error = close(cp_this);
 	if (close_in_error == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cp_this);
 		exit(100);
 	}
-
 	close_in_error = close(to_this);
 	if (close_in_error == -1)
 	{
