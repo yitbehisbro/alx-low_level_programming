@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * messages - prints a message for each condition
+ * error_messages - prints a message for each condition
  * @cp_this: copy file from
  * @to_this: to this file
  * @argv: vector of arguments
