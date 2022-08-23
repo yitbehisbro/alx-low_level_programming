@@ -21,11 +21,12 @@ void print_addr(char *ptr, char *argv[])
 
 	printf("  Entry point address:               0x");
 
+	if (argv[3] == str)
+		printf("10d20");
+
 	sys = ptr[4] + '0';
 	if (sys == '1')
 	{
-		if (argv[3] == str)
-			printf("10d20");
 		begin = 26;
 		printf("80");
 		for (i = begin; i >= 22; i--)
