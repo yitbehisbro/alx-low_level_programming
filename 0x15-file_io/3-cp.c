@@ -9,13 +9,11 @@
  * messages - prints a message for each condition
  * @cp_this: copy file from
  * @to_this: to this file
- * @count_fd: number of fd
- * @count_ch: characters counter
  * @argv: vector of arguments
  *
  * Return: no return as void
  */
-void error_messages(int cp_this, int to_this, ssize_t count_ch, ssize_t count_fd, char *argv[])
+void error_messages(int cp_this, int to_this, char *argv[])
 {
 	if (cp_this == -1)
 	{
@@ -23,16 +21,6 @@ void error_messages(int cp_this, int to_this, ssize_t count_ch, ssize_t count_fd
 		exit(98);
 	}
 	if (to_this == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
-	if (count_ch == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	if (count_fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
@@ -59,16 +47,16 @@ int main(int argc, char *argv[])
 	}
 	cp_this = open(argv[1], O_RDONLY);
 	to_this = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_messages(cp_this, to_this, 0, 0, argv);
+	error_messages(cp_this, to_this, argv);
 	count_ch = 1024;
 	while (count_ch == 1024)
 	{
 		count_ch = read(cp_this, buffer, 1024);
 		if (count_ch == -1)
-			error_messages(0, 0, -1, 0, argv);
+			error_messages(-1, 0, argv);
 		count_fd = write(to_this, buffer, count_ch);
 		if (count_fd == -1)
-			error_messages(0, 0, 0, -1, argv);
+			error_messages(0, -1, argv);
 	}
 	close_in_error = close(cp_this);
 	if (close_in_error == -1)
