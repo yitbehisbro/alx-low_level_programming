@@ -9,23 +9,19 @@
 /**
  * print_addr - prints address
  * @ptr: magic.
- * @argv: vector arguments
  * Return: no return.
  */
-void print_addr(char *ptr, char *argv[])
+void print_addr(char *ptr)
 {
 	int i;
 	int begin;
 	char sys;
-	char *str = "sparcbigendian32";
 
 	printf("  Entry point address:               0x");
 
 	sys = ptr[4] + '0';
 	if (sys == '1')
 	{
-		if (argv[2] == str)
-			printf("10d20");
 		begin = 26;
 		printf("80");
 		for (i = begin; i >= 22; i--)
@@ -41,8 +37,6 @@ void print_addr(char *ptr, char *argv[])
 
 	if (sys == '2')
 	{
-		if (argv[2] == str)
-			printf("10d20");
 		begin = 26;
 		for (i = begin; i > 23; i--)
 		{
@@ -162,10 +156,9 @@ void info_magic(char *ptr)
 /**
  * _systeminfo - check the version system.
  * @ptr: magic.
- * @argv: vector arguments
  * Return: no return.
  */
-void _systeminfo(char *ptr, char *argv[])
+void _systeminfo(char *ptr)
 {
 	char sys = ptr[4] + '0';
 
@@ -185,7 +178,7 @@ void _systeminfo(char *ptr, char *argv[])
 	print_version(ptr);
 	print_osabi(ptr);
 	print_type(ptr);
-	print_addr(ptr, argv);
+	print_addr(ptr);
 }
 
 /**
@@ -246,7 +239,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	_systeminfo(ptr, argv);
+	_systeminfo(ptr);
 	close(fd);
 
 	return (0);
