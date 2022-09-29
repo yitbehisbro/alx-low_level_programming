@@ -76,15 +76,12 @@ int main(int argc, char *argv[])
 
 	crack[0] = ((char *)letters)[(size ^ 59) & 63];
 	for (ch = 0, vch = 0; vch < size; vch++)
-	{
 		ch += argv[1][vch];
-	}
-	crack[1] = ((char *)letters)[(ch ^ 79) & 63];
 
+	crack[1] = ((char *)letters)[(ch ^ 79) & 63];
 	for (ch = 1, vch = 0; vch < size; vch++)
-	{
 		ch *= argv[1][vch];
-	}
+
 	crack[2] = ((char *)letters)[(ch ^ 85) & 63];
 	crack[3] = ((char *)letters)[biggest(argv[1], size)];
 	crack[4] = ((char *)letters)[mult_username(argv[1], size)];
