@@ -36,8 +36,8 @@ hash_table_t *hash_table_create(unsigned long int size)
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	hash_table_t *table = malloc(sizeof(hash_table_t));
-	hash_node_t **array = malloc(sizeof(hash_node_t *) * size);
+	shash_table_t *table = malloc(sizeof(shash_table_t));
+	shash_node_t **array = malloc(sizeof(shash_node_t *) * size);
 	unsigned long int i = 0;
 
 	if (table == NULL || array == NULL)
