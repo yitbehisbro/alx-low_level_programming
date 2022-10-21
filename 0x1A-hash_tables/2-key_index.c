@@ -22,90 +22,121 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 }
 
 /**
- * shash_table_create - creates a hash table.
- * @size: the size of the array
+ * shash_table_create - creates a shash table with a given size
  *
- * Return: a pointer to the newly created hash table
- * else returns NULL
+ * @size: size of the shash table
+ * Return: the created shash table, or NULL if function fails
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shash_table_t *table = malloc(sizeof(shash_table_t));
-	shash_node_t **array = malloc(sizeof(shash_node_t *) * size);
-	unsigned long int i = 0;
+	shash_table_t *table;
+	shash_node_t **array;
+	unsigned long int i;
 
-	if (table == NULL || array == NULL)
+	table = malloc(sizeof(shash_table_t));
+	if (table == NULL)
 		return (NULL);
 
-	while (i < size)
-	{
+	array = malloc(sizeof(shash_node_t *) * size);
+	if (array == NULL)
+		return (NULL);
+
+	for (i = 0; i < size; i++)
 		array[i] = NULL;
-		i++;
-	}
+
 	table->array = array;
 	table->size = size;
+	table->shead = NULL;
+	table->stail = NULL;
 
 	return (table);
 }
 
 /**
- * add_nodeint - adds a node at the beginning.
+ * add_n_shash - adds a node at the beginning.
  * @head: head of the hash_node_t linked list.
  * @key: is the key.
  * @value: is the value associated with the key.
  *
  * Return: head of the hash_node_t
  */
-shash_node_t *add_nodeint(shash_node_t **head,
-			 const char *key, const char *value)
+shash_node_t *add_n_shash(shash_node_t **h, const char *key, const char *value)
 {
-	shash_node_t *logs;
+	shash_node_t *tmp;
 
-	logs = *head;
+	tmp = *h;
 
-	while (logs != NULL)
+	while (tmp != NULL)
 	{
-		if (strcmp(key, logs->key) == 0)
+		if (strcmp(key, tmp->key) == 0)
 		{
-			free(logs->value);
-			logs->value = strdup(value);
-			return (*head);
+			free(tmp->value);
+			tmp->value = strdup(value);
+			return (tmp);
 		}
-		logs = logs->next;
+		tmp = tmp->next;
 	}
 
-	logs = malloc(sizeof(shash_node_t));
+	tmp = malloc(sizeof(shash_node_t));
 
-	if (logs == NULL)
+	if (tmp == NULL)
 		return (NULL);
 
-	logs->key = strdup(key);
-	logs->value = strdup(value);
-	logs->next = *head;
-	*head = logs;
+	tmp->key = strdup(key);
+	tmp->value = strdup(value);
+	tmp->next = *h;
 
-	return (*head);
+	*h = tmp;
+
+	return (tmp);
 }
 
 /**
- * shash_table_set - adds an element to the hash table.
- * @ht: the hash table you want to add or update the key/value to
- * @key: is the key.
- * @value: is the value associated with the key.
+ * add_i_shash - adds a node on the DLL of the shash table
+ * @ht: pointer to the table
+ * @new: new node to add
  *
- * Return: 1 if it succeeded, 0 otherwise
+ * Return: no return
  */
-int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+void add_i_shash(shash_table_t *ht, shash_node_t *new)
 {
-	unsigned long int index_k;
+	shash_node_t *tmp1, *tmp2;
+	int ret;
 
-	if (ht == NULL || key == NULL || *key == '\0')
-		return (0);
+	tmp1 = tmp2 = ht->shead;
 
-	index_k = key_index((unsigned char *)key, ht->size);
+	while (tmp1 != NULL)
+	{
+		ret = strcmp(new->key, tmp1->key);
+		if (ret == 0)
+		{
+			return;
+		}
+		else if (ret < 0)
+		{
+			new->sprev = tmp1->sprev;
 
-	if (add_nodeint(&(ht->array[index_k]), key, value) == NULL)
-		return (0);
+			if (tmp1->sprev)
+				tmp1->sprev->snext = new;
+			else
+				ht->shead = new;
 
-	return (1);
+			tmp1->sprev = new;
+			new->snext = tmp1;
+
+			return;
+		}
+		tmp2 = tmp1;
+		tmp1 = tmp1->snext;
+	}
+
+	new->sprev = tmp2;
+	new->snext = NULL;
+
+	if (ht->shead)
+		tmp2->snext = new;
+	else
+		ht->shead = new;
+
+	ht->stail = new;
 }
