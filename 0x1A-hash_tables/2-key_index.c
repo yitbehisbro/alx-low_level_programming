@@ -21,6 +21,17 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 	return (key_idx);
 }
 
+/*
+ * ==================DISCLAIMER======================
+ * The following functions are no part of key_index(..)
+ * rather for the last tasks
+ *
+ * This function been here because of betty style
+ * It is known that having more than 5 function in one file
+ * is againsts the betty rule. RULE OF LAW :) :)
+ * ==================DISCLAIMER======================
+ */
+
 /**
  * shash_table_create - creates a shash table with a given size
  *
@@ -54,7 +65,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 /**
  * add_n_shash - adds a node at the beginning.
- * @head: head of the hash_node_t linked list.
+ * @h: head of the hash_node_t linked list.
  * @key: is the key.
  * @value: is the value associated with the key.
  *
