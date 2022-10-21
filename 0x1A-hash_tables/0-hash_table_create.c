@@ -26,30 +26,3 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	return (table);
 }
-
-/**
- * shash_table_create - creates a hash table.
- * @size: the size of the array
- *
- * Return: a pointer to the newly created hash table
- * else returns NULL
- */
-shash_table_t *shash_table_create(unsigned long int size)
-{
-	shash_table_t *table = malloc(sizeof(shash_table_t));
-	shash_node_t **array = malloc(sizeof(shash_node_t *) * size);
-	unsigned long int i = 0;
-
-	if (table == NULL || array == NULL)
-		return (NULL);
-
-	while (i < size)
-	{
-		array[i] = NULL;
-		i++;
-	}
-	table->array = array;
-	table->size = size;
-
-	return (table);
-}
