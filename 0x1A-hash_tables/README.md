@@ -1,4 +1,5 @@
-0x1A. C - Hash tables
+<h1>>0x1A. C - Hash tables</h1>
+<h2>Tasks</h2>
 <p>0. Write a function that creates a hash table.</p>
 <p>1. Write a hash function implementing the djb2 algorithm.</p>
 <p>2. Write a function that gives you the index of a key.</p>
