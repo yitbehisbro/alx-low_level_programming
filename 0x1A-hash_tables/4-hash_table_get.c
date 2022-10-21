@@ -13,6 +13,12 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *item = ht->array[index];
 
+	if (ht == NULL)
+		return (NULL);
+
+	if (key == NULL || *key == '\0')
+		return (NULL);
+
 	if (item == NULL)
 		return (NULL);
 
