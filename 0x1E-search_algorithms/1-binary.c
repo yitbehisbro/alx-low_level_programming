@@ -10,18 +10,18 @@
  */
 void display(size_t size, int *array, size_t min)
 {
-	size_t i;
+	size_t i, k;
 
-	printf("Searching in array: ");
 	for (i = min; i <= size; i++)
 	{
-		printf("%d", array[i]);
 		if (i == size)
-			continue;
-		else
-			printf(", ");
+		{
+			printf("Searching in array");
+			for (k = min; k <= size; k++)
+				printf("%s %d", (k == min) ? ":" : ",", array[k]);
+			printf("\n");
+		}
 	}
-	printf("\n");
 }
 
 /**
